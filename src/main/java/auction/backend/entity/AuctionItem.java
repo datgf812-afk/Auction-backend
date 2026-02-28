@@ -16,7 +16,9 @@ public class AuctionItem {
     private Long id;
 
     private String name;
+    @Column(columnDefinition = "TEXT")
     private String description;
+    @Column(columnDefinition = "TEXT")
     private String imageUrl;
     private Double currentPrice;
     private LocalDateTime startTime;
