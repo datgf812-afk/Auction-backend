@@ -36,7 +36,6 @@ public class AuctionItemService {
             history.setImageUrl(item.getImageUrl());
             history.setWinPrice(topBid.getAmount());
             history.setWinTime(LocalDateTime.now());
-            history.setDescription(item.getDescription());
             auctionHistoryRepository.save(history);
         }
     }
