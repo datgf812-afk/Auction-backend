@@ -40,7 +40,6 @@ public class AuctionJob {
                     history.setImageUrl(item.getImageUrl());
                     history.setWinPrice(topBid.getAmount());
                     history.setWinTime(now);
-                    history.setDescription(item.getDescription());
                     historyRepository.save(history);
                     bidsRepository.deleteByAuctionItem(item);
                 }

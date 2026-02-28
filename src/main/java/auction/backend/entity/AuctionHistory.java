@@ -16,8 +16,6 @@ public class AuctionHistory {
     private Long auctionItemId;
     @Column(nullable = false)
     private String userName;
-    @Column(nullable = false)
-    private String description;
 
     @Column(nullable = false)
     private String itemName;
