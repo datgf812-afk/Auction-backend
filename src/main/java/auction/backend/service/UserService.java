@@ -25,9 +25,9 @@ public class UserService {
                 User demoUser = new User();
                 demoUser.setUserName(userName);
                 demoUser.setEmail(userName + "@demo.com");
-                demoUser.setPassword("demo123");
+                demoUser.setPassword(passwordEncoder.encode("demo123"));
                 demoUser.setRole("USER");
-                demoUser.setCash(5000000000d);
+                demoUser.setCash(99999999999d);
                 return repository.save(demoUser);
             }
             throw new RuntimeException("Không tìm thấy tài khoản: " + userName);
