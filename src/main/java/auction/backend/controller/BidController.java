@@ -16,8 +16,8 @@ public class BidController {
     private final BidService bidService;
 
     @PostMapping
-    public BidResponseDTO placeBid(@RequestBody BidRequestDTO requestDTO) {
-        return bidService.placeBid(requestDTO);
+    public BidResponseDTO placeBid(@RequestBody BidRequestDTO requestDTO,@RequestHeader("Authorization") String token) {
+        return bidService.placeBid(requestDTO, token);
     }
 
     @GetMapping("/{itemId}")
